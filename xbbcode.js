@@ -528,7 +528,88 @@ var XBBCODE = (function() {
 	    closeTag: function(params,content) {
 	        return '</div></dd></dl>';
 	    }
-	}
+	},
+	"blur": {
+            openTag: function(params,content) {
+                return "<span class=\"blur\">";
+            },
+            closeTag: function(params,content) {
+                return "</span>";
+            },
+        },
+        "scroll": {
+            openTag: function(params,content) {
+                return "<span><marquee>";
+            },
+            closeTag: function(params,content) {
+                return "</marquee></span>";
+            },
+        },
+        "marquee": { //clone of scroll
+            openTag: function(params,content) {
+                return "<span><marquee>";
+            },
+            closeTag: function(params,content) {
+                return "</marquee></span>";
+            },
+        },
+        "fade": {
+            openTag: function(params,content) {
+                return "<span class=\"fade\">";
+            },
+            closeTag: function(params,content) {
+                return "</span>";
+            },
+        },
+        "fliph": {
+            openTag: function(params,content) {
+                return "<span class=\"flipH\">";
+            },
+            closeTag: function(params,content) {
+                return "</span>";
+            },
+        },
+        "flipv": {
+            openTag: function(params,content) {
+                return "<span class=\"flipV\">";
+            },
+            closeTag: function(params,content) {
+                return "</span>";
+            },
+        },
+        "updown": {
+            openTag: function(params,content) {
+                return "<span><marquee height=\"60\" scrollamount=\"1\" direction=\"up\" behavior=\"scroll\">";
+            },
+            closeTag: function(params,content) {
+                return "</marquee></span>";
+            },
+        },
+        "strike": {
+            openTag: function(params,content) {
+                return "<span><strike>";
+            },
+            closeTag: function(params,content) {
+                return "</strike></span>";
+            },
+        },
+        "wow": {
+            openTag: function(params,content) {
+                return "<a href=\"http://www.wowhead.com/object=" + content + "\">";
+            },
+            closeTag: function(params,content) {
+                return "</a>";
+            },
+        },
+        // hr has no closing tag. what do i do now
+        /*"hr": {
+            openTag: function(params,content) {
+                return "<hr>";
+            },
+            closeTag: function(params,content) {
+                return "";
+            },
+        }*/
     };
 
     // create tag list and lookup fields
