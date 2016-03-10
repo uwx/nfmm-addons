@@ -13,9 +13,21 @@
       removeMisalignedTags: false,
       addInLineBreaks: false
     });
-    console.error("Errors", result.error);
-    console.dir(result.errorQueue);
-    console.log(result.html);
+    //console.error("Errors", result.error);
+    //console.dir(result.errorQueue);
+    //console.log(result.html);
+	$('#emptyidcc').html(result.html);
   </script>
+  <table class="bodylinewidth" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
+        <tbody>
+            <tr>
+                <td class="bodyline">
+                    <div id="page-body">
+                        <div id="emptyidcc" class="no-left"></div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
