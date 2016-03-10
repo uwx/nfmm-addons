@@ -513,7 +513,22 @@ var XBBCODE = (function() {
                 return "</li>";
             },
             restrictParentsTo: ["list","ul","ol"]
-        }
+        },
+        /*spoiler tag by chris, script by illiweb(?)*/
+        "spoiler": {
+	    openTag: function(params,content) {
+	        var spoilerTitle = (params.substr(1)).toLowerCase() || '';
+	        
+	        if (spoilerTitle !== '') {
+	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed"><b>' + spoilerTitle + ':</b></span></dt><dd class="spoiler_closed hidden">&nbsp;</dd><dd><div class="spoiler_content">';
+	        } else { // no bold here. that may be a style choice
+	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed">Spoiler:</span></dt><dd class="spoiler_closed hidden">&nbsp;</dd><dd><div class="spoiler_content">';
+	        }
+	    },
+	    closeTag: function(params,content) {
+	        return '</a>';
+	    }
+	}
     };
 
     // create tag list and lookup fields
