@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" type="text/css" href="xbbcode.css">
-  <link rel="stylesheet" type="text/css" href="78-ltr.css">
-  <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="xbbcode.css">
+    <link rel="stylesheet" type="text/css" href="78-ltr.css">
+    <script src="http://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <style>
+        p,
+        td,
+        th {
+            color: #EEEEEE;
+        }
+    </style>
 </head>
+
 <body>
-  <script src="xbbcode.js"></script>
-  <script>
-    var result = XBBCODE.process({
-      text: "[b]Hello world[/b]",
-      removeMisalignedTags: false,
-      addInLineBreaks: false
-    });
-    //console.error("Errors", result.error);
-    //console.dir(result.errorQueue);
-    //console.log(result.html);
-	$('#emptyidcc').html(result.html);
-  </script>
-  <table class="bodylinewidth" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
+    <script src="xbbcode.js"></script>
+    <script>
+        var result = XBBCODE.process({
+            text: "[b]Hello world[/b]",
+            removeMisalignedTags: false,
+            addInLineBreaks: false
+        });
+        //console.error("Errors", result.error);
+        //console.dir(result.errorQueue);
+        //console.log(result.html);
+        $('#emptyidcc').html(result.html);
+    </script>
+    <table class="bodylinewidth" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
         <tbody>
             <tr>
                 <td class="bodyline">
@@ -30,4 +39,5 @@
         </tbody>
     </table>
 </body>
+
 </html>
