@@ -1,1 +1,55 @@
-i am a [b]test[/b]!
+[img]http://i.imgur.com/LdaMmdY.png[/img]
+BETA 11
+
+[img]http://i.imgur.com/fIvsxoG.png[/img]
+[list][*]High quality music using the NativeBass library
+[*]Car Maker with 10000 polygon limit (NOTE: Cars still need to be under 210 polygons to be published)
+[*]Create games when there's already a game that has started
+[*]Change the lobby's color to a color of your choice (VERY UNFINISHED)
+[*]Brightness goes down to black in car select
+[*]Instant car select
+[*]Arrow points directly to checkpoints
+[*]Double arrow mode
+[*]Rocket League-style camera
+[*]Custom MP3 soundtrack
+[*]3 different speedometer styles
+[*]Very advanced and extensible modding API
+[*]Player latency display (ping), credits to DragShot
+[*]Distance to checkpoint/car displayed below arrow (in meters and feet)
+[*]Proper crash log and stuff so the game doesn't just freeze
+[*]Look left and right (default Q and W)
+[*]Easily changeable key binds (open the addonsettings.data file in Notepad)
+[*]When you lock the arrow on someone, the stage becomes darker and they glow red
+[*]The game feels a lot more responsive and the framerate is a lot more stable
+[*]Transparent glass
+[*]Toggle landscape (mountains, clouds etc.), credits to DragShot
+[*]F1 to take screenshot, credits to DragShot
+[*]Remaining fixes displayed on screen, credits to DragShot
+[*]All Time Top 20 stages and NFMM stages can be played in singleplayer, credits to DragShot
+[*]Disable Trees and Bumps in singleplayer, partial credits to DragShot
+[*]Changeable render distance up to [b]Far[/b] and [b]Infinite[/b] (renders the whole map), partial credits to DragShot
+[*]Toggle HUD (default B)
+[*]Record, save and watch game footage - VERY UNFINISHED (F2 to save footage, F3 to load)
+[*]Possibly more?
+[*]Many, many small fixes to the NFM engine[/list]
+
+[img]http://i.imgur.com/k25uYoE.png[/img]
+The addons can be downloaded [url=https://www.dropbox.com/s/sjqg4hj7yid1ure/thehansen%20addons.rar?dl=0]here[/url]. [b][color=red]YOU NEED THE LATEST JAVA![/color][/b]
+4 example mods for the API, including source code, can be downloaded [url=http://www.thehansenhome.tk/thehansen-addons/mods.rar]here[/url] [b](optional)[/b]
+The javadocs for the API can be viewed [url=http://www.thehansenhome.tk/doc/]here[/url] and downloaded [url=http://www.thehansenhome.tk/thehansen-addons/doc.zip]here[/url]. [b](optional)[/b]
+[spoiler="Mirrors"]
+
+Extra Mirrors
+[b]WARNING:[/b] These mirrors are not guaranteed to be up-to-date.
+http://www.solidfiles.com/v/5wBMmQpYZYe6y
+http://hugefiles.net/2qu3o1oadxcv
+http://www.sendmyway.com/m16t51pkwj0s
+http://uptobox.com/yu4ddt2m8diz
+http://rghost.net/6BdQ5pmK2
+https://tusfiles.net/449u8rl2w1tg
+http://www118.zippyshare.com/v/oaHHAUA8/file.html
+
+[/spoiler]
+
+To install, simply unzip the files to your NFMM folder and double click the .jar file.
+If you use Linux, delete /dev/sda and go get Windows.
