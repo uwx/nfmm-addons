@@ -520,9 +520,9 @@ var XBBCODE = (function() {
 	        var spoilerTitle = params.substr(2, params.length - 3) || '';
 	        
 	        if (spoilerTitle !== '') {
-	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed"><b>' + spoilerTitle + ':</b></span></dt><dd class="spoiler_closed">&nbsp;</dd><dd><div class="spoiler_content">';
+	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed"><b>' + spoilerTitle + ':</b></span></dt><dd class="spoiler_closed">&nbsp;</dd><dd><div class="spoiler_content hidden">';
 	        } else { // no bold here. that may be a style choice
-	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed">Spoiler:</span></dt><dd class="spoiler_closed">&nbsp;</dd><dd><div class="spoiler_content">';
+	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed">Spoiler:</span></dt><dd class="spoiler_closed">&nbsp;</dd><dd><div class="spoiler_content hidden">';
 	        }
 	    },
 	    closeTag: function(params,content) {
