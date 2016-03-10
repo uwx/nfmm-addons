@@ -23,6 +23,9 @@
 			height: 100%;*/
 			
 		}
+		#first-tr {
+			background-color: #0f0f0f;
+		}
     </style>
     <title>thehansen addons BBCode previewer</title>
 </head>
@@ -42,7 +45,7 @@
 				var result = XBBCODE.process({
 					text: data,
 					removeMisalignedTags: false,
-					addInLineBreaks: false
+					addInLineBreaks: true
 				});
 				$('#page-body').html(result.html);
 			  },
@@ -60,7 +63,7 @@
                 <td>
 					<table class="bodylinewidth" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
 						<tbody>
-							<tr>
+							<tr id="first-tr">
 								<td class="bodyline">
 									<div id="page-body">
 										<!--<div id="emptyidcc" class="no-left"></div>-->
