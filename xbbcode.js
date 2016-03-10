@@ -517,16 +517,16 @@ var XBBCODE = (function() {
         /*spoiler tag by chris, script by illiweb(?)*/
         "spoiler": {
 	    openTag: function(params,content) {
-	        var spoilerTitle = (params.substr(1)).toLowerCase() || '';
+	        var spoilerTitle = params.substr(2, params.length - 3) || '';
 	        
 	        if (spoilerTitle !== '') {
-	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed"><b>' + spoilerTitle + ':</b></span></dt><dd class="spoiler_closed hidden">&nbsp;</dd><dd><div class="spoiler_content">';
+	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed"><b>' + spoilerTitle + ':</b></span></dt><dd class="spoiler_closed">&nbsp;</dd><dd><div class="spoiler_content">';
 	        } else { // no bold here. that may be a style choice
-	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed">Spoiler:</span></dt><dd class="spoiler_closed hidden">&nbsp;</dd><dd><div class="spoiler_content">';
+	        	return '<dl class="codebox spoiler"><dt style="cursor: pointer;"><span class="genmed">Spoiler:</span></dt><dd class="spoiler_closed">&nbsp;</dd><dd><div class="spoiler_content">';
 	        }
 	    },
 	    closeTag: function(params,content) {
-	        return '</a>';
+	        return '</div></dd></dl>';
 	    }
 	}
     };
