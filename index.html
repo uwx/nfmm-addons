@@ -24,21 +24,34 @@
 			
 		}
     </style>
+    <title>thehansen addons BBCode previewer</title>
 </head>
 
 <body>
     <script src="xbbcode.js"></script>
     <script>
+		// created by chris
+		// licensed under MIT
 		$(document).ready(function() {
-			var result = XBBCODE.process({
-				text: "[b]Hello world[/b]",
-				removeMisalignedTags: false,
-				addInLineBreaks: false
+			//$.get('foo.txt', function(data) {
+			//});
+			
+			$.ajax({
+			  url: 'foo.txt',
+			  success: function(data) {
+				var result = XBBCODE.process({
+					text: data,
+					removeMisalignedTags: false,
+					addInLineBreaks: false
+				});
+				$('#page-body').html(result.html);
+			  },
+			  dataType: "text"
 			});
+			
 			//console.error("Errors", result.error);
 			//console.dir(result.errorQueue);
 			//console.log(result.html);
-			$('#page-body').html(result.html);
 		});
     </script>
     <table class="prebody" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
