@@ -3,7 +3,27 @@
 <body>
 <script>
     window.onload = function() {
-        var strings = "\"Hope springs eternal, unless a communist leader kills it first\"\r\n\"A friend in need, no longer a friend\"\r\n\"Finders keepers, losers shot\"\r\n\"Jack of all trades, master-bater\"\r\n\"When the cat\'s away, the mice will step on traps and die\"\r\n\"The path of the rapist man is sex on all sides by the erections of the selfish and the titties of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother\'s sex slave and the rapist of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy my brothers. And you will know I touch little boys when I lay my penis upon thee!\"\r\n\"a blurred snow effect around the edges of highlight areas in a photographic image caused by reflection and scattering of light through the emulsion from the back surface of the film support or plate.\"\r\nThanks allan for the help.\r\n\"You need to shut the fuck up.\" - Penn Jillette\r\nPart of a series on <br><span style=\"padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em;font-size:200%;font-weight:normal;padding-bottom:0.15em;\">Autism<\/span>\r\nShoutouts to Simpleflips\r\nForced indentation is like forced sex - Only rapists and Python coders like it.\r\nI host all of my stuff in the cloud-- er, I mean butt.\r\nI\'m the kind of guy to get banned from the Picross 3D servers.\r\nMy hoby: Mispelling words.\r\nIs it the Nutshack, after all?\r\n<i>\"How to not get Lynks disease\"<\/i><br><i>\"How to get rid of old memes\"<\/i>\r\nMy hobby: Making static sites that are generated client-side, at runtime.\r\nMy hobby: Making Java parsers in JavaScript.".split('\r\n');
+        var strings = [
+            "\"Hope springs eternal, unless a communist leader kills it first\"",
+            "\"A friend in need, no longer a friend\",",
+            "\"Finders keepers, losers shot\",",
+            "\"Jack of all trades, master-bater\",",
+            "\"When the cat's away, the mice will step on traps and die\",",
+            "\"The path of the rapist man is sex on all sides by the erections of the selfish and the titties of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's sex slave and the rapist of lost children. And I will strike down upon thee with great vengeance and furious anger those who attempt to poison and destroy my brothers. And you will know I touch little boys when I lay my penis upon thee!\"",
+            "\"a blurred snow effect around the edges of highlight areas in a photographic image caused by reflection and scattering of light through the emulsion from the back surface of the film support or plate.\"",
+            "Thanks allan for the help.",
+            "\"You need to shut the fuck up.\" - Penn Jillette",
+            "Part of a series on \<br>\<span style=\"padding:0.2em 0.4em 0.2em;padding-top:0;font-size:145%;line-height:1.2em;font-size:200%;font-weight:normal;padding-bottom:0.15em;\">Autism\</span>",
+            "Shoutouts to Simpleflips",
+            "Forced indentation is like forced sex - Only rapists and Python coders like it.",
+            "I host all of my stuff in the cloud-- er, I mean butt.",
+            "I'm the kind of guy to get banned from the Picross 3D servers.",
+            "My hoby: Mispelling words.",
+            "Is it the Nutshack, after all?",
+            "\<i>\"How to not get Lynks disease\"\</i>\<br>\<i>\"How to get rid of old memes\"\</i>",
+            "My hobby: Making static sites that are generated client-side, at runtime.",
+            "My hobby: Making Java parsers in JavaScript.",
+        ];
         var hanse = document.getElementById('hanse');
         if (hanse.textContent) {
             hanse.textContent = strings[Math.floor(Math.random() * strings.length)];
