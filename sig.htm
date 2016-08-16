@@ -25,8 +25,8 @@
             "My hobby: Making Java parsers in JavaScript.",
         ];
         var hanse = document.getElementById('hanse');
-        if (hanse.textContent) {
-            hanse.textContent = strings[Math.floor(Math.random() * strings.length)];
+        if (hanse.innerHTML) {
+            hanse.innerHTML = strings[Math.floor(Math.random() * strings.length)];
         } else if (hanse.innerText) {
             hanse.innerText = strings[Math.floor(Math.random() * strings.length)];
         }
