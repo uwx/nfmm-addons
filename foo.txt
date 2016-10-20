@@ -1,10 +1,12 @@
 [img]http://i.imgur.com/LdaMmdY.png[/img]
-BETA 13
+BETA 14
 
 [img]http://i.imgur.com/fIvsxoG.png[/img]
 [list][*]High quality music using the NativeBass library
+[*]Singleplayer games with 1-8 players (up to 7 AI) (UNFINISHED)
+[*]UI using the NimROD Look & Feel (UNFINISHED)
 [*]Car Maker with 10000 polygon limit (NOTE: Cars still need to be under 210 polygons to be published)
-[*]Added support for loading colors from MTL files when importing OBJ files in the Car Maker
+[*]Support for loading colors from MTL files when importing OBJ files in the Car Maker
 [*]Create games when there's already a game that has started
 [*]Change the lobby's color to a color of your choice (VERY UNFINISHED)
 [*]Brightness goes down to black in car select
@@ -35,7 +37,7 @@ BETA 13
 [*]Many, many small fixes to the NFM engine[/list]
 
 [img]http://i.imgur.com/k25uYoE.png[/img]
-The addons can be downloaded [url=https://github.com/chrishansen69/nfmm-addons/archive/master.zip]here[/url]. [b][color=red]YOU NEED THE LATEST JAVA![/color][/b]
+The addons can be downloaded [url=https://github.com/rafa1231518/nfmm-addons/archive/master.zip]here[/url]. [b][color=red]YOU NEED THE LATEST JAVA![/color][/b]
 4 example mods for the API, including source code, can be downloaded [url=http://www.thehansenhome.tk/thehansen-addons/mods.rar]here[/url] [b](optional)[/b]
 The javadocs for the API can be viewed [url=http://www.thehansenhome.tk/doc/]here[/url] and downloaded [url=http://www.thehansenhome.tk/thehansen-addons/doc.zip]here[/url]. [b](optional)[/b]
 [spoiler="Mirrors"][b]WARNING:[/b] These mirrors are not guaranteed to be up-to-date. Use at your own risk.
