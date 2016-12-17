@@ -3,7 +3,13 @@
   <head>
     <title>embed</title>
     <script type="text/javascript">
-      // script here
+      window.onload = function() {
+        var script = document.createElement("script");
+        var loc = document.location.toString();
+        var p1 = loc.substr(loc.lastIndexOf('?loc=') + 5);
+        script.setAttribute("src", p1);//'https://gist.github.com/rafa1231518/4c4922a9119f908ea5b6114bb674512c.js'
+        (document.head || document.getElementsByTagName("head")[0]).appendChild(script);
+      };
     </script>
     <style type="text/css">
       /* css here */
