@@ -8,7 +8,7 @@
           var callbackName = "gist_callback";
           window[callbackName] = function (gistData) {
             try { delete window[callbackName]; } catch(e) { window[callbackName] = undefined; }
-            var html = '<link rel="stylesheet" href="' + escapeHtml(gistData.stylesheet) + '"></link>';
+            var html = '<link rel="stylesheet" href="' + gistData.stylesheet + '"></link>';
             html += gistData.div;
             element.innerHTML = html;
             script.parentNode.removeChild(script);
