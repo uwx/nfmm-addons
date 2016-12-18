@@ -4,11 +4,32 @@
     <title>embed</title>
     <script type="text/javascript">
       window.onload = function() {
+        function loadGist(element, gistId) {
+          var callbackName = "gist_callback";
+          window[callbackName] = function (gistData) {
+            try { delete window[callbackName]; } catch(e) { window[callbackName] = undefined; }
+            var html = '<link rel="stylesheet" href="' + escapeHtml(gistData.stylesheet) + '"></link>';
+            html += gistData.div;
+            element.innerHTML = html;
+            script.parentNode.removeChild(script);
+          };
+          var script = document.createElement("script");
+          script.setAttribute("src", gistId + ".json?callback=" + callbackName);
+          document.body.appendChild(script);
+        }
+
         var script = document.createElement("script");
         var loc = document.location.toString();
         var p1 = loc.substr(loc.lastIndexOf('?loc=') + 5);
-        script.setAttribute("src", p1);//'https://gist.github.com/rafa1231518/4c4922a9119f908ea5b6114bb674512c.js'
-        (document.head || document.getElementsByTagName("head")[0]).appendChild(script);
+        
+        if (p1.lastIndexOf('#') > p1.lastIndexOf('/')) {
+          p1 = p1.substr(0, p1.lastIndexOf('#'));
+        }
+        if (p1.lastIndexOf('.') > p1.lastIndexOf('/')) {
+          p1 = p1.substr(0, p1.lastIndexOf('.'));
+        }
+        
+        loadGist(document.body, p1);
       };
     </script>
     <style type="text/css">
