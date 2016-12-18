@@ -12,7 +12,7 @@
             var html = '<link rel="stylesheet" href="' + gistData.stylesheet + '"></link>';
             html += gistData.div;
             element.innerHTML = html;
-            script.parentNode.removeChild(script);
+            (script.parentNode || document.body).removeChild(script);
           };
           script.setAttribute("src", gistId + ".json?callback=" + callbackName);
           document.body.appendChild(script);
