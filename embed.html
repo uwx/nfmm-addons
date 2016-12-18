@@ -3,7 +3,7 @@
   <head>
     <title>embed</title>
     <script type="text/javascript">
-      window.onload = function() {
+      document.addEventListener("DOMContentLoaded", function(event) {
         function loadGist(element, gistId) {
           var callbackName = "gist_callback";
           var script = document.createElement("script");
@@ -30,7 +30,7 @@
         }
         
         loadGist(document.body, p1);
-      };
+      });
     </script>
     <style type="text/css">
       body {
