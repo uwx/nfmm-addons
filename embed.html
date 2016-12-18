@@ -6,6 +6,7 @@
       window.onload = function() {
         function loadGist(element, gistId) {
           var callbackName = "gist_callback";
+          var script = document.createElement("script");
           window[callbackName] = function (gistData) {
             try { delete window[callbackName]; } catch(e) { window[callbackName] = undefined; }
             var html = '<link rel="stylesheet" href="' + gistData.stylesheet + '"></link>';
@@ -13,7 +14,6 @@
             element.innerHTML = html;
             script.parentNode.removeChild(script);
           };
-          var script = document.createElement("script");
           script.setAttribute("src", gistId + ".json?callback=" + callbackName);
           document.body.appendChild(script);
         }
@@ -39,6 +39,6 @@
     </style>
   </head>
   <body>
-    body here
+    Loading gist...
   </body>
 </html>
