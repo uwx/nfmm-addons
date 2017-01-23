@@ -1,98 +1,49 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <link rel="stylesheet" type="text/css" href="xbbcode.css">
-    <link rel="stylesheet" type="text/css" href="78-ltr.css">
-    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
-    <script src="spoilers.js"></script> <!-- spoiler code by illiweb -->
-    <style>
-        p,
-        td,
-        th {
-            color: #EEEEEE;
-        }
-	.bodylinewidth {
-		margin-top: 10px;
-		width: 84%;
-		height: 100%;
-		
-	}
-	.prebody {
-		margin-top: 0px;
-		/*width: 84%;
-		height: 100%;*/
-		
-	}
-	#first-tr {
-		background-color: #0f0f0f;
-	}
-	/* spoiler title - increased font size, default 11px */
-	/*.genmed {
-		font-size: 12px;
-	}*/
+	<meta charset="utf-8" />
+	<title>Title This Page :)</title>
 	
-	/* spoiler content - increased font size, default 11px */
-	/*.spoiler_content {
-		font-size: 12px;
-	}*/
+	<!-- jQuery: Grab Google CDN jQuery. fall back to local if necessary -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script>!window.jQuery && document.write('<script src="jquery-1.4.1.min.js"><\/script>')</script>
 	
-	/* from .postbody */
-	#page-body {
-	    font-size: 12px;
-	    line-height: 18px;
-	}
+	<!-- The raptorize file  -->
+	<script src="jquery.raptorize.1.0.js"></script>
 	
-    </style>
-    <title>thehansen addons BBCode previewer</title>
-</head>
-
-<body>
-    <script src="xbbcode.js"></script>
-    <script>
-		// created by chris
-		// licensed under MIT
-		$(document).ready(function() {
-			//$.get('foo.txt', function(data) {
-			//});
-			
-			$.ajax({
-			  url: 'foo.txt',
-			  success: function(data) {
-				var result = XBBCODE.process({
-					text: data,
-					removeMisalignedTags: false,
-					addInLineBreaks: true
-				});
-				$('#page-body').html(result.html);
-			  },
-			  dataType: "text"
-			});
-			
-			//console.error("Errors", result.error);
-			//console.dir(result.errorQueue);
-			//console.log(result.html);
+	<!-- For the button version -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.button').raptorize();
 		});
-    </script>
-    <table class="prebody" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
-        <tbody>
-            <tr>
-                <td>
-					<table class="bodylinewidth" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
-						<tbody>
-							<tr id="first-tr">
-								<td class="bodyline">
-									<div id="page-body">
-										<!--<div id="emptyidcc" class="no-left"></div>-->
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</body>
+	</script>
+	
+	<!-- For the Konami Code version -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.button').raptorize({
+				'enterOn' : 'konami-code'
+			});
+		});
+	</script>
+	
+	<!-- For the Timer version -->
+	<!-- <script type="text/javascript">
+		$(window).load(function() {
+			$('.button').raptorize({
+				'enterOn' : 'timer',
+				'delayTime' : 2000
+			});
+		});
+	</script>	
+	-->
 
+</head>
+<body>
+	<h1>Hey There!</h1>
+	
+	<p><a href="#" class="button">Click me</a> to activate the Raptorize plugin.</p>
+	<p>You can also use the Konami-Code (on your keyboard type &uarr; &uarr; &darr; &darr; &larr; &rarr; &larr; &rarr; B A)</p>
+	
+</body>
 </html>
