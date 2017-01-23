@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="xbbcode.css">
+    <link rel="stylesheet" type="text/css" href="78-ltr.css">
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script src="spoilers.js"></script> <!-- spoiler code by illiweb -->
+    <style>
+        p,
+        td,
+        th {
+            color: #EEEEEE;
+        }
+	.bodylinewidth {
+		margin-top: 10px;
+		width: 84%;
+		height: 100%;
+		
+	}
+	.prebody {
+		margin-top: 0px;
+		/*width: 84%;
+		height: 100%;*/
+		
+	}
+	#first-tr {
+		background-color: #0f0f0f;
+	}
+	/* spoiler title - increased font size, default 11px */
+	/*.genmed {
+		font-size: 12px;
+	}*/
+	
+	/* spoiler content - increased font size, default 11px */
+	/*.spoiler_content {
+		font-size: 12px;
+	}*/
+	
+	/* from .postbody */
+	#page-body {
+	    font-size: 12px;
+	    line-height: 18px;
+	}
+	
+    </style>
+    <title>thehansen addons BBCode previewer</title>
+</head>
+
+<body>
+    <script src="xbbcode.js"></script>
+    <script>
+		// created by chris
+		// licensed under MIT
+		$(document).ready(function() {
+			//$.get('foo.txt', function(data) {
+			//});
+			
+			$.ajax({
+			  url: 'foo.txt',
+			  success: function(data) {
+				var result = XBBCODE.process({
+					text: data,
+					removeMisalignedTags: false,
+					addInLineBreaks: true
+				});
+				$('#page-body').html(result.html);
+			  },
+			  dataType: "text"
+			});
+			
+			//console.error("Errors", result.error);
+			//console.dir(result.errorQueue);
+			//console.log(result.html);
+		});
+    </script>
+    <table class="prebody" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
+        <tbody>
+            <tr>
+                <td>
+					<table class="bodylinewidth" align="center" border="0" cellpadding="10" cellspacing="0" width="84%">
+						<tbody>
+							<tr id="first-tr">
+								<td class="bodyline">
+									<div id="page-body">
+										<!--<div id="emptyidcc" class="no-left"></div>-->
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
